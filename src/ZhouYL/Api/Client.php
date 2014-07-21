@@ -88,7 +88,7 @@ class Client
         if (! preg_match('/^https?:\/\//i', filter_var($gateway, FILTER_VALIDATE_URL)))
             throw new Exception('Invalid gateway parameter: ' . $gateway);
 
-        if (stripos('https', $gateway) && (is_null($this->port) || $this->port == 80))
+        if (stripos('https', $gateway) !== false && is_null($this->port))
             $this->setPort(443);
 
         $this->gateway = rtrim($gateway, '/');
