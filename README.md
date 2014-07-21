@@ -4,12 +4,6 @@
 
 ```json
 {
-    "repositories": [
-        {
-            "url": "https://github.com/zhouyl/ApiClient.git",
-            "type": "git"
-        }
-    ],
     "require": {
         "zhouyl/apiclient": "dev-master"
     }
